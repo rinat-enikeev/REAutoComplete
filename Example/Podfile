@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'REAutoComplete_Example' do
+  pod 'REAutoComplete', :path => '../'
+
+  target 'REAutoComplete_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,6 +1,6 @@
 # REAutoComplete
 
-[![CI Status](http://img.shields.io/travis/Rinat Enikeev/REAutoComplete.svg?style=flat)](https://travis-ci.org/Rinat Enikeev/REAutoComplete)
+[![CI Status](http://img.shields.io/travis/Rinat Enikeev/REAutoComplete.svg?style=flat)](https://travis-ci.org/rinat-enikeev/REAutoComplete)
 [![Version](https://img.shields.io/cocoapods/v/REAutoComplete.svg?style=flat)](http://cocoapods.org/pods/REAutoComplete)
 [![License](https://img.shields.io/cocoapods/l/REAutoComplete.svg?style=flat)](http://cocoapods.org/pods/REAutoComplete)
 [![Platform](https://img.shields.io/cocoapods/p/REAutoComplete.svg?style=flat)](http://cocoapods.org/pods/REAutoComplete)
@@ -22,7 +22,7 @@ pod "REAutoComplete"
 
 ## Author
 
-Rinat Enikeev, rinat.enikeev@gmail.com
+Rinat Enikeev, rinat-enikeev.github.io
 
 ## License
 

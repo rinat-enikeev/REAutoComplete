@@ -1,18 +1,18 @@
 {
   "name": "REAutoComplete",
   "version": "0.1.0",
-  "summary": "A short description of REAutoComplete.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/REAutoComplete",
+  "summary": "UITextField suggestions in UITableView",
+  "description": "Auto complete solution for UITextField.",
+  "homepage": "https://github.com/rinat-enikeev/REAutoComplete",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Rinat Enikeev": "rinat.enikeev@gmail.com"
+    "Rinat Enikeev": "rinat-enikeev.github.io"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/REAutoComplete.git",
+    "git": "https://github.com/rinat-enikeev/REAutoComplete.git",
     "tag": "0.1.0"
   },
   "platforms": {

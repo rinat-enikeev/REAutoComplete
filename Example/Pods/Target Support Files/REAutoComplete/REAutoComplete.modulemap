@@ -1,0 +1,6 @@
+framework module REAutoComplete {
+  umbrella header "REAutoComplete-umbrella.h"
+
+  export *
+  module * { export * }
+}

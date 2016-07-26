@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0201E241F22BEAA90FCFD1CCAB394D00 /* Pods-REAutoComplete_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC1087FD4A7C1F02C5BBD9BBE881DD5C /* Pods-REAutoComplete_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		134932C80ACBF3E711EA77C322E3FE0B /* REAutoComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D92AE0B7028837DF607A4120D80A963 /* REAutoComplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1127A1A99DA6320FECA9C68D33AB01E2 /* REAutoCompleteAlgorithmContains.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482715E620AB84E06F91FC428C1820 /* REAutoCompleteAlgorithmContains.m */; };
 		14CFC4FF0DFED1C3103E5A71B4723C39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		6CDE160F62FBE3138C4CAE3877900C72 /* REAutoComplete-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0FB3DDEDD0489757F315F86B3BDBE /* REAutoComplete-dummy.m */; };
+		2B02E3B25C51EC5332101909CBB0CFC6 /* REAutoComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C1033EAC66406A6D4F89C606A047718 /* REAutoComplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E82641A0DD7DB7455FFE7275A2905A3 /* UITextField+REAutoComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C720910759AE143E70ABB501E61116D /* UITextField+REAutoComplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7034CE563ED3DACDD16B0F8E97E32BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		8A709117046004536BE067C4C52A7E82 /* Pods-REAutoComplete_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F943AC9A24B4D602815E02CFD874D798 /* Pods-REAutoComplete_Example-dummy.m */; };
+		C2652B78B15554761E169706BECEF296 /* REAutoComplete-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C72D46F7225C7949CC87970A149EE4D /* REAutoComplete-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D10D828B4BB158FD52E0AB9042A019A2 /* Pods-REAutoComplete_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49842972323A9A60B4FE1AD5E37CB5D3 /* Pods-REAutoComplete_Tests-dummy.m */; };
-		D139718CB96B0B1539BF96490489579F /* UITextField+REAutoComplete.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ADFF23706E3DD8C9D23D118F7A53DA /* UITextField+REAutoComplete.m */; };
-		D1E699318344EAFFA97256DF8E5AF67B /* REAutoComplete-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C72D46F7225C7949CC87970A149EE4D /* REAutoComplete-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF5D1CF5E6FD7DACE97A12A8CE99A6A9 /* UITextField+REAutoComplete.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8C7C94FBDE5E78A4E5201242AED82B /* UITextField+REAutoComplete.m */; };
 		E016B0B1C601227DE8D4136213C174BD /* Pods-REAutoComplete_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7115193E6F025C36CA7455F2DFDA186 /* Pods-REAutoComplete_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC015C5D1148EF86E0EA3B453CB2F656 /* UITextField+REAutoComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = B03417BFF76718C053004367C5D84DD8 /* UITextField+REAutoComplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9149CE6F139FCE124608912D50E88A0 /* REAutoComplete-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E0FB3DDEDD0489757F315F86B3BDBE /* REAutoComplete-dummy.m */; };
 		EF5EEF9963FAD53180821C57E728381F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		EFB3AACB428F40E22A627CB5B033250B /* REAutoCompleteAlgorithmContains.h in Headers */ = {isa = PBXBuildFile; fileRef = 403C91562BA53911D4917BB694E21D70 /* REAutoCompleteAlgorithmContains.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,29 +36,31 @@
 /* Begin PBXFileReference section */
 		11BEA33E8BD688AA2F545953B7B3AF6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21EBED9039D62267B31A772B78A1E80F /* Pods_REAutoComplete_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_REAutoComplete_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35ADFF23706E3DD8C9D23D118F7A53DA /* UITextField+REAutoComplete.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+REAutoComplete.m"; sourceTree = "<group>"; };
 		3B82079BDB3926BAA7AC5A6669E1791B /* Pods-REAutoComplete_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-REAutoComplete_Tests-resources.sh"; sourceTree = "<group>"; };
 		3C72D46F7225C7949CC87970A149EE4D /* REAutoComplete-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "REAutoComplete-umbrella.h"; sourceTree = "<group>"; };
 		3EFB6391B99B0A522533B2DC5E93B77A /* REAutoComplete.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = REAutoComplete.modulemap; sourceTree = "<group>"; };
 		3FD2305F33D8112D69EBD1E88D3E70ED /* Pods-REAutoComplete_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-REAutoComplete_Tests.modulemap"; sourceTree = "<group>"; };
+		403C91562BA53911D4917BB694E21D70 /* REAutoCompleteAlgorithmContains.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = REAutoCompleteAlgorithmContains.h; sourceTree = "<group>"; };
 		42E0FB3DDEDD0489757F315F86B3BDBE /* REAutoComplete-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "REAutoComplete-dummy.m"; sourceTree = "<group>"; };
 		49842972323A9A60B4FE1AD5E37CB5D3 /* Pods-REAutoComplete_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-REAutoComplete_Tests-dummy.m"; sourceTree = "<group>"; };
-		4D92AE0B7028837DF607A4120D80A963 /* REAutoComplete.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = REAutoComplete.h; sourceTree = "<group>"; };
 		4E86044C6C506427FBBE94F50DFF568A /* Pods-REAutoComplete_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-REAutoComplete_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4FA4E2BC78EE46262ADE97C71C2CBB5F /* REAutoComplete.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = REAutoComplete.xcconfig; sourceTree = "<group>"; };
 		51BA2B0B036D2EF57C8ACCC2F4EB5268 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		533405980BCEC93202B9B278FFC5D94B /* Pods-REAutoComplete_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-REAutoComplete_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		579703902542C8A6AFE01A284D901C69 /* Pods-REAutoComplete_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-REAutoComplete_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		65F4735C1A91D8A2D3882227B6FC2596 /* Pods_REAutoComplete_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_REAutoComplete_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C720910759AE143E70ABB501E61116D /* UITextField+REAutoComplete.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+REAutoComplete.h"; sourceTree = "<group>"; };
 		817211CFF188455E2A532A94B8A4796F /* Pods-REAutoComplete_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-REAutoComplete_Example.modulemap"; sourceTree = "<group>"; };
 		8604801D1BF00E5D0C252998877FDAEC /* Pods-REAutoComplete_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-REAutoComplete_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95CF9EFB777910D7C0333A6C35706931 /* Pods-REAutoComplete_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-REAutoComplete_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B03417BFF76718C053004367C5D84DD8 /* UITextField+REAutoComplete.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextField+REAutoComplete.h"; sourceTree = "<group>"; };
+		9C1033EAC66406A6D4F89C606A047718 /* REAutoComplete.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = REAutoComplete.h; sourceTree = "<group>"; };
 		B2910CE3B054D7ACA0B6E8FD078B6CD5 /* Pods-REAutoComplete_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-REAutoComplete_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B477C9661C239683A4F8CC17C667144C /* Pods-REAutoComplete_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-REAutoComplete_Example-resources.sh"; sourceTree = "<group>"; };
 		B7115193E6F025C36CA7455F2DFDA186 /* Pods-REAutoComplete_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-REAutoComplete_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B7482715E620AB84E06F91FC428C1820 /* REAutoCompleteAlgorithmContains.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = REAutoCompleteAlgorithmContains.m; sourceTree = "<group>"; };
 		B986671A72014C1FF38A45F4531B99EC /* REAutoComplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = REAutoComplete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8C7C94FBDE5E78A4E5201242AED82B /* UITextField+REAutoComplete.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+REAutoComplete.m"; sourceTree = "<group>"; };
 		BD0806DAECF560A2C1E1677CC4A19B73 /* Pods-REAutoComplete_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-REAutoComplete_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC1087FD4A7C1F02C5BBD9BBE881DD5C /* Pods-REAutoComplete_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-REAutoComplete_Example-umbrella.h"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -96,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D02226175B5DD19A7D2760E30060FA7 /* REAutoComplete */ = {
+			isa = PBXGroup;
+			children = (
+				BA5506B2149A0C400F658AC4C9C42079 /* Classes */,
+			);
+			path = REAutoComplete;
+			sourceTree = "<group>";
+		};
 		2F56C194A8EA8F74DA40DB23A131CBBC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,16 +128,6 @@
 				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		423DAE858F3CD3C4E2C9C7CA1A9EFD00 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4D92AE0B7028837DF607A4120D80A963 /* REAutoComplete.h */,
-				B03417BFF76718C053004367C5D84DD8 /* UITextField+REAutoComplete.h */,
-				35ADFF23706E3DD8C9D23D118F7A53DA /* UITextField+REAutoComplete.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		4D263D88DCBD931D82A9D7C9D0A39DC6 /* Pods-REAutoComplete_Example */ = {
@@ -152,6 +154,15 @@
 				B80669813393BE1ABEDA91FC9906CE6D /* REAutoComplete */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5F174EDB5ED11C57C7DA95FB3736F4BA /* Contains */ = {
+			isa = PBXGroup;
+			children = (
+				403C91562BA53911D4917BB694E21D70 /* REAutoCompleteAlgorithmContains.h */,
+				B7482715E620AB84E06F91FC428C1820 /* REAutoCompleteAlgorithmContains.m */,
+			);
+			path = Contains;
 			sourceTree = "<group>";
 		};
 		724D5FE817324CE96E0AB71A01F6371B /* Pods-REAutoComplete_Tests */ = {
@@ -186,11 +197,22 @@
 		B80669813393BE1ABEDA91FC9906CE6D /* REAutoComplete */ = {
 			isa = PBXGroup;
 			children = (
-				C1AC80DAD4B941EFC268269E5F34B547 /* REAutoComplete */,
+				1D02226175B5DD19A7D2760E30060FA7 /* REAutoComplete */,
 				2F56C194A8EA8F74DA40DB23A131CBBC /* Support Files */,
 			);
 			name = REAutoComplete;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		BA5506B2149A0C400F658AC4C9C42079 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C1033EAC66406A6D4F89C606A047718 /* REAutoComplete.h */,
+				6C720910759AE143E70ABB501E61116D /* UITextField+REAutoComplete.h */,
+				BB8C7C94FBDE5E78A4E5201242AED82B /* UITextField+REAutoComplete.m */,
+				DCBEC2C5BCC4F61DB5DADE1824EB39AD /* Algorithms */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -210,12 +232,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C1AC80DAD4B941EFC268269E5F34B547 /* REAutoComplete */ = {
+		DCBEC2C5BCC4F61DB5DADE1824EB39AD /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				423DAE858F3CD3C4E2C9C7CA1A9EFD00 /* Classes */,
+				5F174EDB5ED11C57C7DA95FB3736F4BA /* Contains */,
 			);
-			path = REAutoComplete;
+			path = Algorithms;
 			sourceTree = "<group>";
 		};
 		E243DC0A2F6F365FAFA6BBE55A5093A9 /* Products */ = {
@@ -231,16 +253,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0DA79421F46FE2CA3D4BF684563989D8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1E699318344EAFFA97256DF8E5AF67B /* REAutoComplete-umbrella.h in Headers */,
-				134932C80ACBF3E711EA77C322E3FE0B /* REAutoComplete.h in Headers */,
-				EC015C5D1148EF86E0EA3B453CB2F656 /* UITextField+REAutoComplete.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9052EF0A9F7E5785002629B49C056008 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +266,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0201E241F22BEAA90FCFD1CCAB394D00 /* Pods-REAutoComplete_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4BC097E7E8E0D0827E486756A877DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2652B78B15554761E169706BECEF296 /* REAutoComplete-umbrella.h in Headers */,
+				2B02E3B25C51EC5332101909CBB0CFC6 /* REAutoComplete.h in Headers */,
+				EFB3AACB428F40E22A627CB5B033250B /* REAutoCompleteAlgorithmContains.h in Headers */,
+				5E82641A0DD7DB7455FFE7275A2905A3 /* UITextField+REAutoComplete.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +305,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0B5A881AFB22EC6BF54F23232F9817D /* Build configuration list for PBXNativeTarget "REAutoComplete" */;
 			buildPhases = (
-				9209C30048F8360E7C65D37454C52620 /* Sources */,
+				5E005FA9654239DB871FE953F34D1237 /* Sources */,
 				B6E78DDC6E712E84F276D257B66047D5 /* Frameworks */,
-				0DA79421F46FE2CA3D4BF684563989D8 /* Headers */,
+				EE4BC097E7E8E0D0827E486756A877DE /* Headers */,
 			);
 			buildRules = (
 			);
@@ -349,20 +372,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E005FA9654239DB871FE953F34D1237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9149CE6F139FCE124608912D50E88A0 /* REAutoComplete-dummy.m in Sources */,
+				1127A1A99DA6320FECA9C68D33AB01E2 /* REAutoCompleteAlgorithmContains.m in Sources */,
+				DF5D1CF5E6FD7DACE97A12A8CE99A6A9 /* UITextField+REAutoComplete.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C2295978A1516F55F471B0481FEAA31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8A709117046004536BE067C4C52A7E82 /* Pods-REAutoComplete_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9209C30048F8360E7C65D37454C52620 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6CDE160F62FBE3138C4CAE3877900C72 /* REAutoComplete-dummy.m in Sources */,
-				D139718CB96B0B1539BF96490489579F /* UITextField+REAutoComplete.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,39 +12,47 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class REAutoComplete;
 
-@protocol RESuggestionItem <NSObject>
-- (NSString *)suggestionText;
+@protocol REAutoCompleteItem <NSObject>
+- (NSString *)autoCompleteText;
 @end
 
 @protocol REAutoCompleteAlgorithm <NSObject>
-- (void)suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<RESuggestionItem>>* suggestions))callback;
+- (void)suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback;
 @optional
-- (instancetype)initWithSuggestions:(NSArray<id<RESuggestionItem>>*)suggestions;
+- (instancetype)initWithSuggestions:(NSArray<id<REAutoCompleteItem>>*)suggestions;
 @end
 
 @protocol REAutoCompleteDelegate <UITextFieldDelegate>
-@optional
 
-- (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<RESuggestionItem>)object;
+- (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<REAutoCompleteItem>)object;
+
+@optional
 
 - (void)autoCompleteWillAppear:(REAutoComplete*)autoComplete;
 - (void)autoCompleteWillDissapear:(REAutoComplete*)autoComplete;
 
-#pragma mark - Cell
-- (void)autoComplete:(REAutoComplete*)autoComplete configureCell:(UITableViewCell *)cell withObject:(id<RESuggestionItem>)object;
+// cell
+- (void)autoComplete:(REAutoComplete*)autoComplete configureCell:(UITableViewCell *)cell withObject:(id<REAutoCompleteItem>)object;
 - (CGFloat)autoComplete:(REAutoComplete*)autocomplete heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 NS_CLASS_AVAILABLE_IOS(8_0) @interface REAutoComplete : NSObject
-@property (strong, nonatomic) id<REAutoCompleteAlgorithm> algorithm;
+
+// all UITextField delegate calls will be forwarded to this delegate 
 @property (strong, nonatomic) id<REAutoCompleteDelegate> delegate;
+
+@property (weak, nonatomic, readonly) UITextField* textField;
+@property (strong, nonatomic) id<REAutoCompleteAlgorithm> algorithm;
 @property (assign, nonatomic) NSUInteger minimumCharacters;
 
 // Appearance
 @property (strong, nonatomic, readonly) UITableView *tableView;
+@property (strong, nonatomic) NSString* cellReuseIdentifier;
 @property (assign, nonatomic) CGFloat tableViewHeight;
+@property (assign, nonatomic) CGRect tableViewFrame;
 @property (assign, nonatomic) BOOL keyboardAccessory;
+@property (assign, nonatomic) BOOL showAlways;
 
 @end
 

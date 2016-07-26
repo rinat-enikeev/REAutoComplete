@@ -7,3 +7,6 @@
 //
 
 #import "UITextField+REAutoComplete.h"
+
+// algorithms
+#import "REAutoCompleteAlgorithmContains.h"

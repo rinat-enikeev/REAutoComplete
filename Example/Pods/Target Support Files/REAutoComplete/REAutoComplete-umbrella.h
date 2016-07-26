@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "REAutoCompleteAlgorithmContains.h"
 #import "REAutoComplete.h"
 #import "UITextField+REAutoComplete.h"
 

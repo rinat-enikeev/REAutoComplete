@@ -209,7 +209,7 @@ static char _autoComplete;
 
 #pragma mark <UITableViewDelegate>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.delegate respondsToSelector:@selector(autocomplete:heightForRowAtIndexPath:)]) {
+    if ([self.delegate respondsToSelector:@selector(autoComplete:heightForRowAtIndexPath:)]) {
         return [self.delegate autoComplete:self heightForRowAtIndexPath:indexPath];
     }
     return 35.0f;

@@ -9,7 +9,7 @@
 #import <objc/runtime.h>
 #import "UITextField+REAutoComplete.h"
 
-@interface REAutoComplete() <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface REAutoComplete() <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) UITextField* textField;
 @property (strong, nonatomic) UITableView *tableView;
 @property (nonatomic, strong) NSArray<id<REAutoCompleteItem>> *suggestions;

@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_CLASS_AVAILABLE_IOS(8_0) @interface REAutoComplete : NSObject
+NS_CLASS_AVAILABLE_IOS(8_0) @interface REAutoComplete : NSObject<UITextFieldDelegate>
 
 // all UITextField delegate calls will be forwarded to this delegate 
 @property (strong, nonatomic) id<REAutoCompleteDelegate> delegate;

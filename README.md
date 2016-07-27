@@ -5,11 +5,31 @@
 [![License](https://img.shields.io/cocoapods/l/REAutoComplete.svg?style=flat)](http://cocoapods.org/pods/REAutoComplete)
 [![Platform](https://img.shields.io/cocoapods/p/REAutoComplete.svg?style=flat)](http://cocoapods.org/pods/REAutoComplete)
 
-## Example
+UITextField category to add autocomplete suggestions in a UITableView.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Usage
+
+````objc
+
+#import <REAutoComplete/REAutoComplete.h>
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    id<REAutoCompleteAlgorithm> algorithm = <algorithm>;
+    self.textField.autoComplete.algorithm = algorithm;
+    self.textField.autoComplete.delegate = self;
+}
+
+#pragma mark <REAutoCompleteDelegate>
+- (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<REAutoCompleteItem>)object {
+    self.textField.text = [object autoCompleteText];
+}
+
+````
 
 ## Requirements
+
+iOS 8+
 
 ## Installation
 
@@ -17,7 +37,7 @@ REAutoComplete is available through [CocoaPods](http://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "REAutoComplete"
+pod 'REAutoComplete'
 ```
 
 ## Author

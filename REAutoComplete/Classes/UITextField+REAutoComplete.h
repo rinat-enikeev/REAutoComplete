@@ -54,15 +54,19 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface REAutoComplete : NSObject<UITextFieldDele
 @property (assign, nonatomic) NSUInteger minimumCharacters;
 
 // Appearance
-@property (strong, nonatomic, readonly) UITableView *tableView;
-@property (strong, nonatomic) NSString* cellReuseIdentifier;
-@property (assign, nonatomic) CGFloat tableViewHeight;
-@property (assign, nonatomic) CGRect tableViewFrame;
 @property (assign, nonatomic) BOOL keyboardAccessory;
 @property (assign, nonatomic) BOOL showAlways;
+
 @property (assign, nonatomic) BOOL tableViewAutoHeight;
+@property (strong, nonatomic, readonly) UITableView *tableView;
+@property (assign, nonatomic) CGFloat tableViewHeight;
+@property (assign, nonatomic) CGRect tableViewFrame;
 @property (assign, nonatomic) CGFloat tableViewTopMargin;
 @property (assign, nonatomic) CGFloat tableViewBottomMargin;
+
+@property (strong, nonatomic) NSString* cellReuseIdentifier;
+@property (assign, nonatomic) BOOL tableViewCellApplyBoldEffect;
+@property (strong, nonatomic) UIColor* tableViewCellTextColor;
 
 @end
 

@@ -51,12 +51,22 @@ static char _autoComplete;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(keyboardWasShown:)
                                                      name:UIKeyboardDidShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(textFieldDidChangeWithNotification:)
+                                                     name:UITextFieldTextDidChangeNotification object:self.textField];
     }
     return self;
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+}
+
+- (void)textFieldDidChangeWithNotification:(NSNotification *)aNotification
+{
+    if(aNotification.object == self.textField){
+        [self.tableView reloadData];
+    }
 }
 
 - (void)keyboardWasShown:(NSNotification*)aNotification
@@ -244,12 +254,41 @@ static char _autoComplete;
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
         
-        [cell.textLabel setText:[suggestion autoCompleteText]];
+        if (self.tableViewCellTextColor) {
+            [cell.textLabel setTextColor:self.tableViewCellTextColor];
+        }
+        
+        NSString* string = [suggestion autoCompleteText];
+        NSAttributedString *boldedString = nil;
+        if(self.tableViewCellApplyBoldEffect) {
+            NSLog(@"%@", self.textField.text);
+            NSRange boldedRange = [string rangeOfString:self.textField.text options:NSCaseInsensitiveSearch | NSDiacriticInsensitiveSearch];
+            boldedString = [self boldedString:string withRange:boldedRange];
+            cell.textLabel.attributedText = boldedString;
+        } else {
+            [cell.textLabel setText:[suggestion autoCompleteText]];
+        }
         
         return cell;
     }
     
     return nil;
+}
+
+- (NSAttributedString *)boldedString:(NSString *)string withRange:(NSRange)boldRange
+{
+    UIFont *regularFont = [UIFont systemFontOfSize:13];
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:13];
+    
+    NSDictionary *boldTextAttributes = @{NSFontAttributeName : boldFont};
+    NSDictionary *regularTextAttributes = @{NSFontAttributeName : regularFont};
+    
+    NSMutableAttributedString *attributedText =
+    [[NSMutableAttributedString alloc] initWithString:string
+                                           attributes:boldTextAttributes];
+    [attributedText setAttributes:regularTextAttributes range:boldRange];
+    
+    return attributedText;
 }
 
 #pragma mark <UITableViewDelegate>

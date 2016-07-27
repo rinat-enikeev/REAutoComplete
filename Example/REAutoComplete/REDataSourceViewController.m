@@ -22,6 +22,9 @@
     self.textField.autoComplete.dataSource = self;
     // all UITextFieldDelegate calls are forwarded to autoComplete.delegate
     self.textField.autoComplete.delegate = self;
+    self.textField.autoComplete.tableViewTopMargin = 5;
+    self.textField.autoComplete.tableViewBottomMargin = 5;
+    self.textField.autoComplete.tableViewAutoHeight = YES;
 }
 
 #pragma mark <REAutoCompleteDataSource>

@@ -60,6 +60,9 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface REAutoComplete : NSObject<UITextFieldDele
 @property (assign, nonatomic) CGRect tableViewFrame;
 @property (assign, nonatomic) BOOL keyboardAccessory;
 @property (assign, nonatomic) BOOL showAlways;
+@property (assign, nonatomic) BOOL tableViewAutoHeight;
+@property (assign, nonatomic) CGFloat tableViewTopMargin;
+@property (assign, nonatomic) CGFloat tableViewBottomMargin;
 
 @end
 

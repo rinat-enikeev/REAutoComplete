@@ -12,7 +12,10 @@
 @interface REAutoComplete() <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) UITextField* textField;
 @property (strong, nonatomic) UITableView *tableView;
-@property (nonatomic, strong) NSArray<id<REAutoCompleteItem>> *suggestions;
+@property (strong, nonatomic) NSArray<id<REAutoCompleteItem>> *suggestions;
+
+@property (assign, nonatomic) CGRect keyboardRect;
+
 @end
 
 @implementation UITextField(REAutoComplete)
@@ -45,8 +48,37 @@ static char _autoComplete;
         self.tableView = [self constructTableView];
         self.tableViewHeight = 105; // default
         self.tableViewFrame = CGRectZero;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWasShown:)
+                                                     name:UIKeyboardDidShowNotification object:nil];
     }
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+}
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    NSDictionary* info = [aNotification userInfo];
+    self.keyboardRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    [self updateTableViewHeightIfNeeded];
+}
+
+- (void)updateTableViewHeightIfNeeded {
+    if (self.tableViewAutoHeight) {
+        UIWindow *keyWindow = [[[UIApplication sharedApplication] delegate] window];
+        
+        CGPoint textFieldInWindowOrigin = [self.textField convertPoint:self.textField.bounds.origin toView:keyWindow];
+        
+        CGFloat distanceFromBottomOfTextFieldToKeyboard = self.keyboardRect.origin.y - textFieldInWindowOrigin.y - self.textField.frame.size.height;
+        
+        CGFloat tableViewHeightTillKeyboard = distanceFromBottomOfTextFieldToKeyboard - self.tableViewTopMargin - self.tableViewBottomMargin;
+        
+        self.tableViewHeight = tableViewHeightTillKeyboard;
+    }
 }
 
 - (UITableView*)constructTableView {
@@ -59,7 +91,7 @@ static char _autoComplete;
 - (CGRect)tableViewFrame {
     if (CGRectEqualToRect(_tableViewFrame, CGRectZero)) {
         CGRect frame = self.textField.frame;
-        frame.origin.y += self.textField.frame.size.height + 1;
+        frame.origin.y += self.textField.frame.size.height + self.tableViewTopMargin;
         frame.size.height = self.tableViewHeight;
         return frame;
     } else {
@@ -68,7 +100,7 @@ static char _autoComplete;
 }
 
 - (void)setAutoCompleteTableVisibility:(BOOL)visible {
-    
+
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:NO];
     self.tableView.hidden = !visible;
     
@@ -76,6 +108,8 @@ static char _autoComplete;
         if ([self.delegate respondsToSelector:@selector(autoCompleteWillAppear:)]) {
             [self.delegate autoCompleteWillAppear:self];
         }
+        
+        [self updateTableViewHeightIfNeeded];
         
         if (!self.keyboardAccessory) {
             if (self.tableView.superview == nil) {

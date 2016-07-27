@@ -9,7 +9,7 @@ UITextField category to add autocomplete suggestions in a UITableView.
 
 ## Usage
 
-Adapt id<REAutoCompleteItem> protocol: 
+Adapt REAutoCompleteItem protocol (NSString is your data object class): 
 
 ````objc
 #import <REAutoComplete/REAutoComplete.h>
@@ -32,43 +32,13 @@ DataSource based:
     [super viewDidLoad];
 
     self.textField.autoComplete.dataSource = self;
-    // all UITextFieldDelegate calls are forwarded to autoComplete.delegate
     self.textField.autoComplete.delegate = self;
-}
-
-#pragma mark <REAutoCompleteDataSource>
-- (void)autoComplete:(REAutoComplete*)autoComplete suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
-        NSMutableArray *array = <array of id<REAutoCompleteItem>>;
-        if (query.length > 0) {
-            NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", query];
-            [array filterUsingPredicate:predicate];
-        }
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            callback(array);
-        });
-    });
-}
-
-#pragma mark <REAutoCompleteDelegate>
-- (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<REAutoCompleteItem>)object {
-    self.textField.text = [object autoCompleteText];
-    [self.textField resignFirstResponder];
-}
-
-#pragma mark <UITextFieldDelegate>
-// all UITextFieldDelegate calls are forwarded to autoComplete.delegate
--(BOOL)textFieldShouldClear:(UITextField *)textField
-{
-    NSLog(@"TextField cleared");
-    return YES;
 }
 
 ````
 
 Algorithm based: 
+
 ````objc
 
 #import <REAutoComplete/REAutoComplete.h>
@@ -83,12 +53,6 @@ Algorithm based:
     self.textField.autoComplete.algorithm = algorithm;
     self.textField.autoComplete.delegate = self;
 }
-
-#pragma mark <REAutoCompleteDelegate>
-- (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<REAutoCompleteItem>)object {
-    self.textField.text = [object autoCompleteText];
-}
-
 ````
 
 ## Requirements
@@ -106,7 +70,7 @@ pod 'REAutoComplete'
 
 ## Author
 
-Rinat Enikeev, rinat-enikeev.github.io
+Rinat Enikeev, http://rinat-enikeev.github.io
 
 ## License
 

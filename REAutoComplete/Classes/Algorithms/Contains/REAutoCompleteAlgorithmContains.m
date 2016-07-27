@@ -32,7 +32,7 @@
         
         NSMutableArray *array = self.suggestions.mutableCopy;
         if (query.length > 0) {
-            NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", query];
+            NSPredicate* predicate = [NSPredicate predicateWithFormat:@"autoCompleteText CONTAINS[cd] %@", query];
             [array filterUsingPredicate:predicate];
         }
         

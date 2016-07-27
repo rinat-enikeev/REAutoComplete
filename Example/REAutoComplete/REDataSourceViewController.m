@@ -30,7 +30,7 @@
         
         NSMutableArray *array = [[[REDataProvider sharedProvider] countriesArray] mutableCopy];
         if (query.length > 0) {
-            NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", query];
+            NSPredicate* predicate = [NSPredicate predicateWithFormat:@"autoCompleteText BEGINSWITH[cd] %@", query];
             [array filterUsingPredicate:predicate];
         }
         

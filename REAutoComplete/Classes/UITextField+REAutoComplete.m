@@ -104,11 +104,21 @@ static char _autoComplete;
 
 - (void)refreshSuggestionsForQuery:(NSString*)query {
     if (query.length >= self.minimumCharacters) {
-        [self.algorithm suggestionsFor:query whenReady:^(NSArray<id<REAutoCompleteItem>> *suggestions) {
-            [self setAutoCompleteTableVisibility:YES];
-            self.suggestions = suggestions;
-            [self.tableView reloadData];
-        }];
+        
+        if (self.dataSource) {
+            [self.dataSource suggestionsFor:query whenReady:^(NSArray<id<REAutoCompleteItem>> *suggestions) {
+                [self setAutoCompleteTableVisibility:YES];
+                self.suggestions = suggestions;
+                [self.tableView reloadData];
+            }];
+        } else if (self.algorithm) {
+            [self.algorithm suggestionsFor:query whenReady:^(NSArray<id<REAutoCompleteItem>> *suggestions) {
+                [self setAutoCompleteTableVisibility:YES];
+                self.suggestions = suggestions;
+                [self.tableView reloadData];
+            }];
+        }
+        
     } else {
         if (!self.showAlways) {
             [self setAutoCompleteTableVisibility:NO];

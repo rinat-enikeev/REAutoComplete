@@ -16,8 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)autoCompleteText;
 @end
 
-@protocol REAutoCompleteAlgorithm <NSObject>
-- (void)suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback;
+@protocol REAutoCompleteDataSource <NSObject>
+- (void)suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback;;
+@end
+
+@protocol REAutoCompleteAlgorithm <REAutoCompleteDataSource>
 @optional
 - (instancetype)initWithSuggestions:(NSArray<id<REAutoCompleteItem>>*)suggestions;
 @end
@@ -42,8 +45,11 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface REAutoComplete : NSObject
 // all UITextField delegate calls will be forwarded to this delegate 
 @property (strong, nonatomic) id<REAutoCompleteDelegate> delegate;
 
-@property (weak, nonatomic, readonly) UITextField* textField;
+// use either dataSource or algorithm
+@property (strong, nonatomic) id<REAutoCompleteDataSource> dataSource;
 @property (strong, nonatomic) id<REAutoCompleteAlgorithm> algorithm;
+
+@property (weak, nonatomic, readonly) UITextField* textField;
 @property (assign, nonatomic) NSUInteger minimumCharacters;
 
 // Appearance

@@ -51,10 +51,6 @@ Algorithm based:
 }
 ````
 
-## Requirements
-
-iOS 8+
-
 ## Installation
 
 REAutoComplete is available through [CocoaPods](http://cocoapods.org). To install

@@ -1,16 +1,12 @@
 //
-//  REViewController.m
+//  REDataProvider.m
 //  REAutoComplete
 //
-//  Created by Rinat Enikeev on 07/25/2016.
-//  Copyright (c) 2016 Rinat Enikeev. All rights reserved.
+//  Created by Rinat Enikeev on 27/07/16.
+//  Copyright © 2016 Rinat Enikeev. All rights reserved.
 //
 
-#import "REViewController.h"
-#import <REAutoComplete/REAutoComplete.h>
-
-@interface NSString (REAutoCompleteItem) <REAutoCompleteItem>
-@end
+#import "REDataProvider.h"
 
 @implementation NSString (REAutoCompleteItem)
 - (NSString*)autoCompleteText {
@@ -18,34 +14,18 @@
 }
 @end
 
-@interface REViewController () <REAutoCompleteDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-@end
+@implementation REDataProvider
 
-@implementation REViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    id<REAutoCompleteAlgorithm> algorithm = [[REAutoCompleteAlgorithmContains alloc] initWithSuggestions:self.countryArray];
-    self.textField.autoComplete.algorithm = algorithm;
-    self.textField.autoComplete.delegate = self;
++ (REDataProvider*)sharedProvider {
+    static REDataProvider *sharedProvider = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedProvider = [[self alloc] init];
+    });
+    return sharedProvider;
 }
 
-#pragma mark <REAutoCompleteDelegate>
-- (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<REAutoCompleteItem>)object {
-    self.textField.text = [object autoCompleteText];
-    [self.textField resignFirstResponder];
-}
-
-#pragma mark <UITextFieldDelegate>
--(BOOL)textFieldShouldClear:(UITextField *)textField
-{
-    NSLog(@"TextField cleared");
-    return YES;
-}
-
-#pragma mark - Private
-- (NSArray<id<REAutoCompleteItem>>*)countryArray {
+- (NSArray<id<REAutoCompleteItem>>*)countriesArray {
     return @[
              @"Abkhazia",
              @"Afghanistan",

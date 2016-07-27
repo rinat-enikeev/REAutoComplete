@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		07D4D7BF74250DB3B86EA2F5 /* Pods_REAutoComplete_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BD48F25669DBC30DB3A623 /* Pods_REAutoComplete_Example.framework */; };
+		0E5F94D11D4926120022A096 /* REDataSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5F94D01D4926120022A096 /* REDataSourceViewController.m */; };
+		0E5F94D51D4926910022A096 /* REDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5F94D41D4926910022A096 /* REDataProvider.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* REAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* REAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* REViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* REViewController.m */; };
+		6003F5A7195388D20070C39A /* REAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* REAlgorithmViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E5F94CF1D4926120022A096 /* REDataSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDataSourceViewController.h; sourceTree = "<group>"; };
+		0E5F94D01D4926120022A096 /* REDataSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDataSourceViewController.m; sourceTree = "<group>"; };
+		0E5F94D31D4926910022A096 /* REDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REDataProvider.h; sourceTree = "<group>"; };
+		0E5F94D41D4926910022A096 /* REDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REDataProvider.m; sourceTree = "<group>"; };
 		1ADE0234AC1562D426363818 /* REAutoComplete.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = REAutoComplete.podspec; path = ../REAutoComplete.podspec; sourceTree = "<group>"; };
 		22BD48F25669DBC30DB3A623 /* Pods_REAutoComplete_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_REAutoComplete_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E19AC11E9FBBD24FFF73CC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -49,8 +55,8 @@
 		6003F59B195388D20070C39A /* REAutoComplete-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "REAutoComplete-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* REAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* REAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* REViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* REViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REViewController.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* REAlgorithmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REAlgorithmViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* REAlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REAlgorithmViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* REAutoComplete_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = REAutoComplete_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -93,6 +99,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E5F94CC1D4923A50022A096 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0E5F94CD1D4923AC0022A096 /* App delegate */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* REAppDelegate.h */,
+				6003F59D195388D20070C39A /* REAppDelegate.m */,
+			);
+			name = "App delegate";
+			sourceTree = "<group>";
+		};
+		0E5F94CE1D4923B30022A096 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5A5195388D20070C39A /* REAlgorithmViewController.h */,
+				6003F5A6195388D20070C39A /* REAlgorithmViewController.m */,
+				0E5F94CF1D4926120022A096 /* REDataSourceViewController.h */,
+				0E5F94D01D4926120022A096 /* REDataSourceViewController.m */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		0E5F94D21D4926300022A096 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0E5F94D31D4926910022A096 /* REDataProvider.h */,
+				0E5F94D41D4926910022A096 /* REDataProvider.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +174,10 @@
 		6003F593195388D20070C39A /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* REAppDelegate.h */,
-				6003F59D195388D20070C39A /* REAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* REViewController.h */,
-				6003F5A6195388D20070C39A /* REViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
+				0E5F94D21D4926300022A096 /* Data */,
+				0E5F94CE1D4923B30022A096 /* View controllers */,
+				0E5F94CD1D4923AC0022A096 /* App delegate */,
+				0E5F94CC1D4923A50022A096 /* Resources */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = Example;
@@ -390,8 +432,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5F94D11D4926120022A096 /* REDataSourceViewController.m in Sources */,
 				6003F59E195388D20070C39A /* REAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* REViewController.m in Sources */,
+				0E5F94D51D4926910022A096 /* REDataProvider.m in Sources */,
+				6003F5A7195388D20070C39A /* REAlgorithmViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

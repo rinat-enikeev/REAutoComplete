@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface REViewController : UIViewController
+@interface REAlgorithmViewController : UIViewController
 
 @end

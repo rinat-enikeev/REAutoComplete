@@ -106,7 +106,7 @@ static char _autoComplete;
     if (query.length >= self.minimumCharacters) {
         
         if (self.dataSource) {
-            [self.dataSource suggestionsFor:query whenReady:^(NSArray<id<REAutoCompleteItem>> *suggestions) {
+            [self.dataSource autoComplete:self suggestionsFor:query whenReady:^(NSArray<id<REAutoCompleteItem>> *suggestions) {
                 [self setAutoCompleteTableVisibility:YES];
                 self.suggestions = suggestions;
                 [self.tableView reloadData];

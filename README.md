@@ -9,9 +9,73 @@ UITextField category to add autocomplete suggestions in a UITableView.
 
 ## Usage
 
+Adapt id<REAutoCompleteItem> protocol: 
+
+````objc
+#import <REAutoComplete/REAutoComplete.h>
+
+@interface NSString (REAutoCompleteItem) <REAutoCompleteItem>
+@end
+@implementation NSString (REAutoCompleteItem)
+- (NSString*)autoCompleteText {
+return self;
+}
+@end
+````
+
+DataSource based: 
+
+````objc
+#import <REAutoComplete/REAutoComplete.h>
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.textField.autoComplete.dataSource = self;
+    // all UITextFieldDelegate calls are forwarded to autoComplete.delegate
+    self.textField.autoComplete.delegate = self;
+}
+
+#pragma mark <REAutoCompleteDataSource>
+- (void)autoComplete:(REAutoComplete*)autoComplete suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+        NSMutableArray *array = <array of id<REAutoCompleteItem>>;
+        if (query.length > 0) {
+            NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", query];
+            [array filterUsingPredicate:predicate];
+        }
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            callback(array);
+        });
+    });
+}
+
+#pragma mark <REAutoCompleteDelegate>
+- (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<REAutoCompleteItem>)object {
+    self.textField.text = [object autoCompleteText];
+    [self.textField resignFirstResponder];
+}
+
+#pragma mark <UITextFieldDelegate>
+// all UITextFieldDelegate calls are forwarded to autoComplete.delegate
+-(BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    NSLog(@"TextField cleared");
+    return YES;
+}
+
+````
+
+Algorithm based: 
 ````objc
 
 #import <REAutoComplete/REAutoComplete.h>
+
+@interface ViewController () <REAutoCompleteDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@end
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -17,10 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @protocol REAutoCompleteDataSource <NSObject>
-- (void)suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback;;
+- (void)autoComplete:(REAutoComplete*)autoComplete suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback;
 @end
 
-@protocol REAutoCompleteAlgorithm <REAutoCompleteDataSource>
+@protocol REAutoCompleteAlgorithm <NSObject>
+- (void)suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback;
 @optional
 - (instancetype)initWithSuggestions:(NSArray<id<REAutoCompleteItem>>*)suggestions;
 @end

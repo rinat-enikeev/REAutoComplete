@@ -43,10 +43,6 @@ Algorithm based:
 
 #import <REAutoComplete/REAutoComplete.h>
 
-@interface ViewController () <REAutoCompleteDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-@end
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     id<REAutoCompleteAlgorithm> algorithm = <algorithm>;

@@ -9,7 +9,7 @@ UITextField category to add autocomplete suggestions in a UITableView.
 
 ## Usage
 
-Adapt REAutoCompleteItem protocol (NSString is your data object class): 
+Adapt REAutoCompleteItem protocol: 
 
 ````objc
 #import <REAutoComplete/REAutoComplete.h>

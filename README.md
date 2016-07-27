@@ -35,6 +35,11 @@ DataSource based:
     self.textField.autoComplete.delegate = self;
 }
 
+#pragma mark <REAutoCompleteDataSource>
+- (void)autoComplete:(REAutoComplete*)autoComplete suggestionsFor:(NSString*)query whenReady:(void (^)(NSArray<id<REAutoCompleteItem>>* suggestions))callback {
+    callback(@[@"suggestion"]);
+}
+
 ````
 
 Algorithm based: 

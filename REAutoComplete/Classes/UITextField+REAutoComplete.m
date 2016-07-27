@@ -43,7 +43,7 @@ static char _autoComplete;
     self = [super init];
     if (self) {
         self.tableView = [self constructTableView];
-        self.tableViewHeight = 100; // default
+        self.tableViewHeight = 105; // default
         self.tableViewFrame = CGRectZero;
     }
     return self;
@@ -59,7 +59,7 @@ static char _autoComplete;
 - (CGRect)tableViewFrame {
     if (CGRectEqualToRect(_tableViewFrame, CGRectZero)) {
         CGRect frame = self.textField.frame;
-        frame.origin.y += self.textField.frame.size.height;
+        frame.origin.y += self.textField.frame.size.height + 1;
         frame.size.height = self.tableViewHeight;
         return frame;
     } else {
@@ -162,17 +162,18 @@ static char _autoComplete;
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
+    [self setAutoCompleteTableVisibility:NO];
     if ([self.delegate respondsToSelector:_cmd]) {
         return [self.delegate textFieldShouldClear:textField];
     }
-    return NO;
+    return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if ([self.delegate respondsToSelector:_cmd]) {
         return [self.delegate textFieldShouldReturn:textField];
     }
-    return NO;
+    return YES;
 }
 
 #pragma mark <UITableViewDataSource>

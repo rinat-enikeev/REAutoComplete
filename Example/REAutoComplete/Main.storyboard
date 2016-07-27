@@ -18,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zI-JN-K23">
-                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4zI-JN-K23">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4zI-JN-K23" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="Qb7-m6-dfD"/>
+                            <constraint firstItem="4zI-JN-K23" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="8" id="Qb7-m6-dfD"/>
                             <constraint firstItem="4zI-JN-K23" firstAttribute="trailing" secondItem="TpU-gO-2f1" secondAttribute="trailingMargin" id="uZ2-b6-dAr"/>
                             <constraint firstItem="4zI-JN-K23" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" id="ybQ-fM-lRw"/>
                         </constraints>

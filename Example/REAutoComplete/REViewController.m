@@ -34,11 +34,19 @@
 #pragma mark <REAutoCompleteDelegate>
 - (void)autoComplete:(REAutoComplete*)autoComplete didSelectObject:(id<REAutoCompleteItem>)object {
     self.textField.text = [object autoCompleteText];
+    [self.textField resignFirstResponder];
 }
 
+#pragma mark <UITextFieldDelegate>
+-(BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    NSLog(@"TextField cleared");
+    return YES;
+}
+
+#pragma mark - Private
 - (NSArray<id<REAutoCompleteItem>>*)countryArray {
     return @[
-             @"Abkhazia",
              @"Abkhazia",
              @"Afghanistan",
              @"Albania",

@@ -18,7 +18,7 @@ Adapt id<REAutoCompleteItem> protocol:
 @end
 @implementation NSString (REAutoCompleteItem)
 - (NSString*)autoCompleteText {
-return self;
+    return self;
 }
 @end
 ````
